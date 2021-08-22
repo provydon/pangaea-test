@@ -37,3 +37,4 @@ sudo php artisan migrate
 echo "publisher migration Finished Successfuly"
 
 echo "publisher server set"
+echo "publisher & subscriber servers are set and ready to start"
