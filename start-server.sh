@@ -3,8 +3,8 @@
 echo "starting subscriber" 
 cd subscriber
 echo "install dependencies" 
-sudo composer update &
-sudo composer dump-autoload &
+sudo composer update
+sudo composer dump-autoload
 
 # check for .env
 FILE=.env
@@ -14,11 +14,11 @@ else
     echo "subscriber $FILE does not exist, creating new .env form .env.example."
     cp .env.example .env
     echo "subscriber Application Key Set"
-    sudo php artisan key:generate &
+    sudo php artisan key:generate
 fi
 
 echo "subscriber Migration Started" 
-sudo php artisan migrate &
+sudo php artisan migrate
 echo "subscriber migration Finished Successfuly" 
 
 echo "start server"
@@ -36,8 +36,8 @@ cd -
 echo "starting publisher" 
 cd publisher
 echo "install dependencies" 
-sudo composer update &
-sudo composer dump-autoload &
+sudo composer update
+sudo composer dump-autoload
 
 # check for .env
 FILE=.env
@@ -47,11 +47,11 @@ else
     echo "publisher $FILE does not exist, creating new .env form .env.example."
     cp .env.example .env
     echo "publisher Application Key Set"
-    sudo php artisan key:generate &
+    sudo php artisan key:generate
 fi
 
 echo "publisher Migration Started" 
-sudo php artisan migrate &
+sudo php artisan migrate
 echo "publisher migration Finished Successfuly" 
 
 echo "publisher Server Ready"
