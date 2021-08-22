@@ -14,8 +14,13 @@
 # Set Your Keys and APi Keys in the .env.example file and save it.
 
 # run the following commands in the root of the project to give your device root user access to run commands
+$ chmod +x ./init-server.sh 
 $ chmod +x ./start-server.sh 
 $ chmod +x ./stop-server.sh 
+
+# initialize server before first ever startup
+$ sudo ./init-server.sh 
+# wait till init is done then start server
 
 # start server
 $ sudo ./start-server.sh 
