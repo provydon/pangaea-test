@@ -6,9 +6,12 @@
 ```bash
 
 # Do the following for both subscriber & publisher folders
+
 # create a database.
+
 # Update the database credentials in .env.example file and save it.
-# Set Your Keys and APi Keys in the .env.example files and save it.
+
+# Set Your Keys and APi Keys in the .env.example file and save it.
 
 # run the following commands in the root of the project to give your device root user access to run commands
 $ chmod +x ./start-server.sh 
