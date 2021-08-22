@@ -2,46 +2,31 @@
 # Pangaea Take Home Test
 
 ## Inital Build Setup
-### Before you run the app, make sure the following are installed on your machine
-#### PHP 7.3 and above
-#### composer
-#### mysql
-#### 
 
 ```bash
-# install dependencies
-$ composer install
 
-# autoload dependencies
-$ composer dump-autoload
+# Do the following for both subscriber & publisher folders
+# create a database.
+# Update the database credentials in .env.example file and save it.
+# Set Your Keys and APi Keys in the .env.example files and save it.
 
-# create a .env file in the root of the project, and copy and paste the contents of .env.example into it and save it.
-
-# Set Your Keys and APi Keys in the .env file.
-
-# migrate and seed
-$ php artisan migrate --seed
-
-# install passport for api
-$ php artisan passport:install
-
+# run the following commands in the root of the project to give your device root user access to run commands
+$ chmod +x ./start-server.sh 
+$ chmod +x ./stop-server.sh 
 
 # start server
-$ php artisan serve
+$ sudo ./start-server.sh 
 
 # And you're good to go!
+# publisher is now running on port 8000
+# subscriber is now running on port 7000
 ```
 
-## After Build Setup (Incase of Database Refresh)
+## After Build Setup (Incase you want to stop server)
 
 ```bash
-# After you've started the server sometime later in the future during development, if u wish to refresh the database, run
-$ php artisan migrate:refresh --seed
-
-# Then reset access token for the api
-$ php artisan passport:client --personal
-
-# And you're good to go!
+# stop server
+$ sudo ./stop-server.sh 
 ```
 
 For detailed explanation on how things work, check out [Laravel docs](https://laravel.com).

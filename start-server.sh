@@ -4,6 +4,7 @@ echo "starting subscriber"
 cd subscriber
 echo "install dependencies" 
 sudo composer install &
+sudo composer dump-autoload &
 # check for .env
 FILE=.env
 if [ -f "$FILE" ]; then
@@ -29,6 +30,7 @@ echo "starting publisher"
 cd publisher
 echo "install dependencies" 
 sudo composer install &
+sudo composer dump-autoload &
 # check for .env
 FILE=.env
 if [ -f "$FILE" ]; then
